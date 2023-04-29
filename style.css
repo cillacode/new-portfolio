@@ -1,0 +1,275 @@
+*{
+    padding: 0;
+    margin: 0;
+    /* overflow-x: hidden; */
+}
+
+.container{
+    background-color: black;
+    overflow: hidden;
+}
+.salute{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+.saluteTextContainer{
+    flex: 3;
+}
+
+.saluteImageContainer{
+    flex: 1;
+}
+ .saluteText{
+    font-size: 50vw;
+    color: blueviolet;
+    cursor: default;
+ }
+.saluteImg{
+    width: 100%;
+}
+
+.nameContainer{
+    height: 100vh;
+    background-color: rgb(43, 27, 27);
+}
+
+.name{
+    font-size: 10vw;
+    color: #47dc2933;
+    cursor: default;
+    text-align: center;
+    line-height: 100vh;
+}
+
+.jobTitleContainer{
+    height: 100vh;
+}
+.dark{
+    background: url("./image/slate-texture-background.jpg");
+}
+
+.purple{
+    /* background-color: rebeccapurple; */
+    /* background-image: url("/image/bg.png"); */
+    background-color: #001dab;
+}
+
+.jobTitle{
+    font-size: 10vw;
+    color: #333;
+    line-height: 100vh;
+    cursor: default;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    gap: 30vh;
+    padding: 0px 100px;
+}
+
+.projectTitle{
+    font-size: 10vw;
+    color: #333;
+}
+
+.project{
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.project:nth-child(2n){
+    flex-direction: row-reverse;
+}
+.phone{
+    flex: 1;
+    width: 400px;
+    height: 500px;
+    position: relative;
+}
+
+.phoneScreen{
+   width:165px;
+   height: 350px;
+   position: absolute;
+   top: 75px;
+   left: 167px; 
+   border-radius: 18px;
+   overflow-y: scroll;
+}
+
+.phoneScreen::-webkit-scrollbar{
+    display: none;
+}
+.phoneApp{
+    width: 100%;
+}
+
+.projectDetail{
+flex: 1;
+display: flex;
+flex-direction: column;
+gap: 50px;
+align-items: center;
+}
+
+.projectTitle1{
+    font-size: 7vh;
+    color:#555;
+    
+}
+
+.projectDesc{
+    text-align: justify;
+    line-height: 30px;
+    color: #555;
+}
+.projectBtn{
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #555;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.projectBtn::after{
+    content: "View Demo";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: 1s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #555;
+    color: #222;
+
+}
+.projectBtn:hover.projectBtn::after{
+    transform: translateX(100%);
+}
+
+.laptop{
+ width: 300px;
+ height:500px;
+ flex: 1;
+ position:relative;
+}
+
+.laptopScreen{
+    width: 330px;
+    height: 211px;
+    position: absolute;
+    top: 75px;
+    left:138px ;
+    overflow: scroll;
+}
+
+.laptopApp{
+    width: 100%;
+}
+
+.laptopScreen::-webkit-scrollbar{
+    display: none;
+}
+
+.githubContainer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.githubTitle{
+    font-size: 80px;
+    color: #333;
+}
+
+.githubChart{
+    width: 820px;
+    text-align: center;
+}
+
+
+ .dates{
+    padding: 10px;
+    color: green;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+ .boxContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+ }
+
+.box {
+    width: 15px;
+    height: 15px;
+    background-color: #171c25;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: 3s all ease;
+}
+
+.active:nth-child(4n){
+    background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n+1){
+    background-color: #195b2c;
+}
+.githubChart:hover .active:nth-child(2n){
+    background-color: #063f24;
+}
+
+.githubSm{
+    display: none;
+}
+
+@media screen and (max-width:1024px) {
+    .project{
+        flex-direction: column;
+        height: max-content;
+    }
+    .project:nth-child(2n){
+        flex-direction: column;
+    }
+    .projects{
+        padding: 0 30px;
+        text-align: center;
+    }
+    .phone,.laptop{
+        transform: none !important;
+        }
+    .githubChart{
+        display: none;
+    }
+
+    .githubTitle{
+        text-align: center;
+        font-size:10vw ;
+    }
+    .githubSm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        color: #555;
+        font-size: 30px;
+        text-align: center;
+
+
+    }
+}
